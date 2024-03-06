@@ -14,6 +14,14 @@ class ViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     
+    @IBAction func didTapAdd(_ sender: UIBarButtonItem) {
+        
+        let vc = storyboard?.instantiateViewController(withIdentifier: "entry") as! EntryViewController
+        vc.title = "New Task"
+        navigationController?.pushViewController(vc, animated: true)
+        
+        
+    }
     var tasks = [String]()
     
     override func viewDidLoad() {
