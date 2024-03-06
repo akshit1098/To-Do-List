@@ -20,7 +20,11 @@ class ViewController: UIViewController {
         let vc = storyboard?.instantiateViewController(withIdentifier: "entry") as! EntryViewController
         vc.title = "New Task"
         vc.update = {
-            self.updateTasks()
+            
+            //We can udate the tasks in main
+            DispatchQueue.main.async{
+                self.updateTasks()
+            }
             
         }
         navigationController?.pushViewController(vc, animated: true)
@@ -30,6 +34,20 @@ class ViewController: UIViewController {
     
     
     func updateTasks(){
+        
+        tasks.removeAll()
+        
+        guard let count = UserDefaults().value(forKey: "count") as? Int else{
+            return
+        }
+        
+        for x in 0..<count{
+            if let task = UserDefaults().value(forKey: "task_\(x+1)") as? String {
+                tasks.append(task)
+            }
+        }
+        
+        tableView.reloadData()
         
     }
     
