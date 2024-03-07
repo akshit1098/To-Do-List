@@ -48,10 +48,27 @@
                     <view key="view" contentMode="scaleToFill" id="2gH-pM-WVf">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sKf-4F-xXP">
+                                <rect key="frame" x="12" y="71" width="369" height="735"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="JJB-mO-kYp"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="sKf-4F-xXP" firstAttribute="top" secondItem="JJB-mO-kYp" secondAttribute="top" constant="12" id="9TQ-ux-4IO"/>
+                            <constraint firstItem="JJB-mO-kYp" firstAttribute="trailing" secondItem="sKf-4F-xXP" secondAttribute="trailing" constant="12" id="QwJ-O6-BMM"/>
+                            <constraint firstItem="sKf-4F-xXP" firstAttribute="leading" secondItem="JJB-mO-kYp" secondAttribute="leading" constant="12" id="WWV-oK-lka"/>
+                            <constraint firstItem="JJB-mO-kYp" firstAttribute="bottom" secondItem="sKf-4F-xXP" secondAttribute="bottom" constant="12" id="yTq-DQ-jGc"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="bYj-Ga-bWc"/>
+                    <connections>
+                        <outlet property="label" destination="sKf-4F-xXP" id="7FI-Hs-Uwt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="79E-DL-JjL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
